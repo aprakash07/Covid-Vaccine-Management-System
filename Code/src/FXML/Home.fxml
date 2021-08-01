@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="1390.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <top>
+      <Label text="Covid-19 Vaccine Management System" textFill="#bc178a" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane prefHeight="606.0" prefWidth="1039.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="674.0" fitWidth="1129.0" layoutX="36.0" layoutY="1.0" opacity="0.55" pickOnBounds="true">
+               <image>
+                  <Image url="@../Resources/vaccine3.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnBookSlot" layoutX="469.0" layoutY="191.0" mnemonicParsing="false" onAction="#BookSlot" opacity="0.8" prefHeight="93.0" prefWidth="199.0" style="-fx-background-color: purple;" text="Book Slot" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="welcome" layoutX="106.0" layoutY="22.0" text="Welcome, User" textFill="#fcf8fa">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnRegSlot" layoutX="469.0" layoutY="329.0" mnemonicParsing="false" onAction="#RegisteredSlot" opacity="0.8" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: purple;" text="Registered Slots" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAvail" layoutX="469.0" layoutY="472.0" mnemonicParsing="false" onAction="#VaccineAvailability" opacity="0.8" prefHeight="94.0" prefWidth="199.0" style="-fx-background-color: purple;" text="Vaccine Availablility" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <VBox prefHeight="680.0" prefWidth="298.0" spacing="5.0" style="-fx-background-color: #941070;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#Account" prefHeight="55.0" prefWidth="309.0" style="-fx-background-color: #941070; -fx-border-color: black;" text="Account" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="70.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="309.0" style="-fx-background-color: #941070; -fx-border-color: black;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

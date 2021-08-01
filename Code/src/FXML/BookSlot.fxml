@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="737.0" prefWidth="1350.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookSlotController">
+   <top>
+      <Label opacity="0.92" text="Slot Booking" textFill="#941070" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Book Antiqua Bold" size="37.0" />
+         </font>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </Label>
+   </top>
+   <right>
+      <VBox prefHeight="612.0" prefWidth="246.0" spacing="5.0" style="-fx-background-color: #941070;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnHome" mnemonicParsing="false" onAction="#Home" prefHeight="54.0" prefWidth="246.0" style="-fx-background-color: #941070; -fx-border-color: black;" text="Home" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="3.0" top="70.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnAccount" mnemonicParsing="false" onAction="#Account" prefHeight="54.0" prefWidth="246.0" style="-fx-background-color: #941070; -fx-border-color: black;" text="Account" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#logout" prefHeight="54.0" prefWidth="246.0" style="-fx-background-color: #941070; -fx-border-color: black;" text="Logout" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="3.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <AnchorPane prefHeight="302.0" prefWidth="388.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="636.0" fitWidth="1046.0" layoutX="76.0" layoutY="-1.0" opacity="0.6" pickOnBounds="true">
+               <image>
+                  <Image url="@../Resources/vaccine.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="526.0" layoutY="126.0" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sname" layoutX="579.0" layoutY="122.0" prefHeight="30.0" prefWidth="281.0" />
+            <Label layoutX="522.0" layoutY="160.0" text="Gender">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="smale" layoutX="579.0" layoutY="161.0" mnemonicParsing="false" text="Male">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="sfemale" layoutX="661.0" layoutY="161.0" mnemonicParsing="false" text="Female" toggleGroup="$Gender">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="sothers" layoutX="753.0" layoutY="161.0" mnemonicParsing="false" text="Others" toggleGroup="$Gender">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="484.0" layoutY="194.0" text="Date Of Birth">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="sdob" layoutX="579.0" layoutY="189.0" prefHeight="30.0" prefWidth="281.0" />
+            <TextField fx:id="saadhar" layoutX="579.0" layoutY="237.0" prefHeight="30.0" prefWidth="281.0" />
+            <Label layoutX="430.0" layoutY="242.0" text="Aadhar Card Number">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="482.0" layoutY="293.0" text="Preferred Slot">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="spreferredslot" layoutX="579.0" layoutY="288.0" prefHeight="30.0" prefWidth="281.0" />
+            <Button fx:id="register" layoutX="674.0" layoutY="413.0" mnemonicParsing="false" onAction="#register" opacity="0.95" style="-fx-background-color: #941070;" text="Register" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="522.0" layoutY="333.0" text="Vaccine">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="covishield" layoutX="585.0" layoutY="334.0" mnemonicParsing="false" text="Covishield">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="vaccine" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="covaxine" layoutX="685.0" layoutY="334.0" mnemonicParsing="false" text="Covaxine" toggleGroup="$vaccine">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="538.0" layoutY="370.0" text="Dose">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="dose1" layoutX="585.0" layoutY="370.0" mnemonicParsing="false" text="1st">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="dose" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="dose2" layoutX="686.0" layoutY="370.0" mnemonicParsing="false" text="2nd" toggleGroup="$dose">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
